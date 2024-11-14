@@ -1,103 +1,119 @@
 * {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #a1a1a1; 
 }
 
 #root {
-  position: relative;
-  z-index: 1;
-  min-height: 100vh;
-  overflow-y: auto;
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .container {
-  background-color: rgb(33, 31, 31);
-  padding: 24px;
+    background: rgb(33, 31, 31);
+    border-radius: 10px;
+    padding: 50px;
+    border-radius: 12px;
+    margin: 0;
 }
 
 .header {
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-  font-weight: 700;
-  padding-bottom: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 20px;
 }
 
 button {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: rgba(64, 224, 208, 0.845);
-  color: white;
-  text-transform: uppercase;
-  font-weight: 700;
-  cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(64, 224, 208, 0.845);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .copyBtn {
-  height: 30px;
-  font-size: 10px;
+    height: 30px;
+    font-size: 10px;
 }
 
 .charLength {
-  color: white;
-  font-size: 16px;
-  display: flex;
-  flex-direction: column;
-  font-weight: 700;
-  padding-bottom: 24px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    padding-bottom: 24px;
 }
 
 .charLength span {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
 }
 
 .checkBoxes {
-  display: grid;
-  grid-template-columns: auto auto;
-  font-size: 16px;
-  font-weight: 700;
-  color: white;
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
 }
 
 .checkBoxes div {
-  display: flex;
-  gap: 5px;
-  padding-bottom: 25px;
+    display: flex;
+    gap: 5px;
+    padding-bottom: 25px;
 }
 
 .generateBtn {
-  width: 100%;
-  font-size: 20px;
-  padding: 20px;
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
 }
 
 .error {
-  color: red;
-  padding-bottom: 12px;
+    color: red;
+    padding-bottom: 12px;
 }
 
 .passwordStrength {
-  color: white;
-  font-size: 16px;
-  font-weight: 700;
-  padding-bottom: 24px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .container {
     max-width: 100%;
   }
@@ -107,4 +123,4 @@ button {
   .container {
     max-width: 100%
   }
-}
+} */

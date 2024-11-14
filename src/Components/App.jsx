@@ -30,53 +30,55 @@ const App = () => {
     const { password, errorMessage, generatePassword } = usePasswordGenerator();
 
     return (
-        <div className="container">
-            {password && (
-                <div className="header">
-                    <div className="title">{password}</div>
-                    <button className="copyBtn" onClick={handleCopy}>
-                        {copied ? "Copied" : "Copy"}
-                    </button>
-                </div>
-            )}
-            {/* character length slider */}
-            <div className="charLength">
-                <span>
-                    <label>Character Length</label>
-                    <label>{length}</label>
-                </span>
-                <input
-                    type="range"
-                    min="4"
-                    max="32"
-                    value={length}
-                    onChange={(event) => setLength(event.target.value)}
-                />
-            </div>
-            {/* checkboxes for uppercase, lowercase, numbers, and special characters */}
-            <div className="checkBoxes">
-                {checkBoxData.map((data, index) => (
-                    <div key={index}>
-                        <input
-                            type="checkbox"
-                            checked={data.checked}
-                            onChange={() => handleCheckBoxChange(index)}
-                        />
-                        <label>{data.title}</label>
+        <div className="wrapper">
+            <div className="container">
+                {password && (
+                    <div className="header">
+                        <div className="title">{password}</div>
+                        <button className="copyBtn" onClick={handleCopy}>
+                            {copied ? "Copied" : "Copy"}
+                        </button>
                     </div>
-                ))}
+                )}
+                {/* character length slider */}
+                <div className="charLength">
+                    <span>
+                        <label>Character Length</label>
+                        <label>{length}</label>
+                    </span>
+                    <input
+                        type="range"
+                        min="4"
+                        max="32"
+                        value={length}
+                        onChange={(event) => setLength(event.target.value)}
+                    />
+                </div>
+                {/* checkboxes for uppercase, lowercase, numbers, and special characters */}
+                <div className="checkBoxes">
+                    {checkBoxData.map((data, index) => (
+                        <div key={index}>
+                            <input
+                                type="checkbox"
+                                checked={data.checked}
+                                onChange={() => handleCheckBoxChange(index)}
+                            />
+                            <label>{data.title}</label>
+                        </div>
+                    ))}
+                </div>
+                {/* password strenthg meter */}
+                <PasswordStrengthIndicator password={password} />
+                {/* error handling */}
+                {errorMessage && <div className="error">{errorMessage}</div>}
+                {/* password input */}
+                <button
+                    className="generateBtn"
+                    onClick={() => generatePassword(checkBoxData, length)}
+                >
+                    Generate Password
+                </button>
             </div>
-            {/* password strenthg meter */}
-            <PasswordStrengthIndicator password={password} />
-            {/* error handling */}
-            {errorMessage && <div className="error">{errorMessage}</div>}
-            {/* password input */}
-            <button
-                className="generateBtn"
-                onClick={() => generatePassword(checkBoxData, length)}
-            >
-                Generate Password
-            </button>
         </div>
     );
 };
