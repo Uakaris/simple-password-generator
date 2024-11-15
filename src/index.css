@@ -11,7 +11,13 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-image: radial-gradient(circle at center, white 0, grey, rgb(33, 31, 31) 200%);
+    background-image: radial-gradient(
+        circle at center,
+        rgb(172, 158, 158) 0,
+        grey,
+        rgb(33, 31, 31) 200%
+    );
+    /* background-color: pink; */
 }
 
 #root {
@@ -30,11 +36,13 @@ body {
 }
 
 .container {
-    background: rgb(33, 31, 31);
+    background: rgba(33, 31, 31, 0.7);
     border-radius: 10px;
     padding: 50px;
     border-radius: 12px;
     margin: 0;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .header {
