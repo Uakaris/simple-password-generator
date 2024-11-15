@@ -11,7 +11,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #a1a1a1; 
+    background-image: radial-gradient(circle at center, white 0, grey, rgb(33, 31, 31) 200%);
 }
 
 #root {
